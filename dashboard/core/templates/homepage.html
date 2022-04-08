@@ -7,6 +7,11 @@
     <title>Dashboard</title>
 </head>
 <body>
-    <h2>Эта главная страница!</h2>
+    <h2>Dashboard</h2>
+    <ul>
+        {% for task in tasks %}
+            <li>{{ task.text }} - {{ task.get_status_display }}</li>
+        {% endfor %}
+    </ul>
 </body>
 </html>
